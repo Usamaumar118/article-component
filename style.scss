@@ -27,9 +27,6 @@ html{
     @media only screen and (max-width: 800px){
         font-size: 60%;
     }
-    @media only screen and (max-width: 650px){
-        font-size: 58%;
-    }
 }
 
 body{
@@ -50,12 +47,12 @@ body{
 
 .card{
     max-width: 75rem;
-    background-color: #fff;
+    background-color: var(--c-light-grayish-blue);
     display: grid;
     border-radius: 1rem ;
     grid-template-columns: 40% 1fr;
     box-shadow: 0 1.5rem 5rem var(--c-grayish-blue);
-    overflow: hidden;
+
 
     @media only screen and (max-width: 800px){
         max-width: 65rem;
@@ -73,10 +70,24 @@ body{
             object-fit: cover;
             width: 100%;
             height: 100%;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            @media only screen and (max-width: 570px){
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                border-bottom-left-radius: 0;
+
+            }
+
     }
 
     &__text{
         padding: 2.5rem;
+        
+        @media only screen and (max-width: 570px){
+            overflow: hidden;
+
+        }
 
         &__heading{
             color: var(--c-dark-grayish-blue);
@@ -85,8 +96,13 @@ body{
         }
         &__para{
             color: var(--c-desaturated-dark-blue);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 1.5rem;
+
+            @media only screen and (max-width: 570px){
+                margin-bottom: 2.5rem;
+
+            }
         }
 
         &__author{
@@ -94,6 +110,12 @@ body{
             grid-template-columns: max-content 1fr max-content;
             gap: 1.5rem;
             align-items: center;
+            position: relative;
+
+            @media only screen and (max-width: 570px){
+                padding: 0 2rem;
+
+            }
         
             &__img{
                 width: 4rem;
@@ -112,15 +134,81 @@ body{
                 color: var(--c-grayish-blue);
             }
             &__share-icon{
-                background-color: var(--c-light-grayish-blue);
-                padding: .8rem;
-                border-radius: 4rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &__wrapper{
+                    background-color: var(--c-light-grayish-blue);
+                    height: 3.2rem;
+                    width: 3.2rem;
+                    display: block;
+                    border-radius: 11rem;
+                    position: relative;
+
+                    &--modal{
+                        display: none;
+                            
+                        @media only screen and (max-width: 570px){
+                            display: block;
+                            background-color: var(--c-desaturated-dark-blue);
+                        }
+                    }
+                }
             }
+        }
+
+        &__share{
+            background: var(--c-dark-grayish-blue);
+            display: none;
+            grid-template-columns: max-content 1fr max-content;
+            align-items: center;
+            padding: 1.8rem 3rem;
+            border-radius: .8rem;
+            position: absolute;
+            bottom: 135%;
+            right: -25%;
+
+    
+            @media only screen and (max-width: 570px){
+                width: calc(100% + 5rem);
+                right: -2.5rem;
+                padding: 1.8rem 2.5rem;
+                bottom: -60%;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+
+            }
+
+            &__p{
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin-right: 1.5rem;
+                color: var(--c-grayish-blue);
+            }
+
+
+            &__list{
+                display: flex;
+                align-items: center;
+                
+
+                &__item{
+                    margin-right:1.5rem;
+
+                    &--last{
+                        margin-right: 0;
+                    }
+                }
+            }
+
+
         }
 
     }
 }
 
-
-
-
+.is-open{
+    display: grid;
+}
