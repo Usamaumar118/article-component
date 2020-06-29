@@ -17,6 +17,7 @@
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 html {
@@ -24,16 +25,94 @@ html {
   font-family: "manrope", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  line-height: 1.5;
 }
 
 body {
   font-size: 1.3rem;
   min-height: 100vh;
   background-color: var(--c-light-grayish-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card {
-  min-width: 60%;
-  border: 1px solid red;
+  max-width: 40%;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  border-radius: 1rem;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
+  -webkit-box-shadow: 0 1.5rem 5rem var(--c-grayish-blue);
+          box-shadow: 0 1.5rem 5rem var(--c-grayish-blue);
+  overflow: hidden;
+}
+
+.card__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card__text {
+  padding: 2.5rem;
+}
+
+.card__text__heading {
+  color: var(--c-dark-grayish-blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.card__text__para {
+  color: var(--c-desaturated-dark-blue);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__text__author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr max-content;
+      grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-columns: max-content 1fr max-content;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__text__author__img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 22rem;
+}
+
+.card__text__author__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--c-dark-grayish-blue);
+  margin-bottom: .2rem;
+}
+
+.card__text__author__date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--c-grayish-blue);
+}
+
+.card__text__author__share-icon {
+  background-color: var(--c-light-grayish-blue);
+  padding: .8rem;
+  border-radius: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
