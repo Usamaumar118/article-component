@@ -28,6 +28,18 @@ html {
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 58%;
+  }
+}
+
 body {
   font-size: 1.3rem;
   min-height: 100vh;
@@ -43,8 +55,14 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-width: 570px) {
+  body {
+    padding: 5rem 2rem;
+  }
+}
+
 .card {
-  max-width: 40%;
+  max-width: 75rem;
   background-color: #fff;
   display: -ms-grid;
   display: grid;
@@ -54,6 +72,25 @@ body {
   -webkit-box-shadow: 0 1.5rem 5rem var(--c-grayish-blue);
           box-shadow: 0 1.5rem 5rem var(--c-grayish-blue);
   overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    max-width: 65rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    max-width: 60rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .card__img img {
