@@ -44,9 +44,22 @@
             28 Jun 2020
           </h4>
         </div>
+        <a href="" class="card__text__author__share-icon__wrapper">
+          <img src="images/icon-share.svg" class="card__text__author__share-icon" alt="share-icon">
+        </a>
 
-        <img src="images/icon-share.svg" class="card__text__author__share-icon" alt="share-icon">
+        <div class="card__text__share">
+          <p class="card__text__share__p">Share</p>
+          <ul class="card__text__share__list">
+            <a href="#" class="card__text__share__list__item"><img src="images/icon-facebook.svg" alt="fb"></a>
+            <a href="#" class="card__text__share__list__item"><img src="images/icon-twitter.svg" alt="twitter"></a>
+            <a href="#" class="card__text__share__list__item card__text__share__list__item--last"><img src="images/icon-pinterest.svg" alt="pintrest"></a>
+          </ul>
 
+          <a href="" class="card__text__author__share-icon__wrapper card__text__author__share-icon__wrapper--modal">
+            <img src="images/icon-share-white.svg" class="card__text__author__share-icon card__text__author__share-icon--modal" alt="share-icon">
+          </a>
+        </div>
         
       </div>
     </div>
@@ -54,7 +67,22 @@
   
 
   
+<script>
 
+  let shareBtn = document.querySelector('.card__text__author__share-icon__wrapper')
+  let shareBtnModal = document.querySelector('.card__text__author__share-icon__wrapper--modal')
+  let shareModal = document.querySelector('.card__text__share')
+
+  shareBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    shareModal.classList.toggle('is-open')
+  })
+  shareBtnModal.addEventListener('click', (e) => {
+    e.preventDefault()
+    shareModal.classList.toggle('is-open')
+  })
+
+</script>
   
 
   <!-- <div class="attribution">
