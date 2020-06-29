@@ -1,0 +1,40 @@
+:root{
+    --c-dark-grayish-blue: hsl(217, 19%, 35%);
+    --c-desaturated-dark-blue: hsl(214, 17%, 51%);
+    --c-grayish-blue: hsl(212, 23%, 69%);
+    --c-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3rem;
+    min-height: 100vh;
+    background-color: var(--c-light-grayish-blue);
+}
+
+.card{
+    min-width: 60%;
+    border: 1px solid red;
+}
+
+
+
+
